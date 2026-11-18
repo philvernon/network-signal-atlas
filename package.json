@@ -1,0 +1,52 @@
+{
+  "name": "@des/network-signal-atlas",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "build": "pnpm typecheck && vite build && node ../../scripts/check-app-builds.mjs dist",
+    "preview": "vite preview --host 127.0.0.1",
+    "format": "oxfmt --config .oxfmtrc.json .",
+    "format:check": "oxfmt --check --config .oxfmtrc.json .",
+    "lint": "oxlint --config .oxlintrc.json .",
+    "test": "vitest run --config vitest.config.ts",
+    "test:watch": "vitest --config vitest.config.ts",
+    "test:launcher": "pnpm --dir ../.. launcher:capture --app network-signal-atlas"
+  },
+  "dependencies": {
+    "@des/grid-react": "workspace:*",
+    "@des/grid-viz": "workspace:*",
+    "@des/ui": "workspace:*",
+    "@philvernon/grid-data-kit-core": "^0.2.10",
+    "@tanstack/react-query": "5.105.0",
+    "d3-array": "^3.2.5",
+    "d3-scale": "^4.0.3",
+    "d3-shape": "^3.2.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@storybook/react-vite": "^10.5.10",
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/d3-array": "^3.2.2",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-shape": "^3.2.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "jsdom": "^30.0.1",
+    "oxfmt": "0.75.0",
+    "oxlint": "^1.79.0",
+    "storybook": "^10.5.10",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
+  }
+}

@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-condition
+dist-launcher
+storybook-static
+playwright-report
+test-results
+coverage
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Restore third-party skills from package.json and skills-lock.json.
+/.agents/skills/
+/.pi/skills/
+
+# Local app scope for a worker (including its atomic-write temporary file)
+/.pi/storybook-worker.json*
+
+# Local Docker deployment configuration and UI Builder hosting build artifacts
+/.env
+/packages/ui-builder/tsconfig.docker.json
+/packages/ui-builder/server/hosted.mjs
+
+# Launcher voting database (including SQLite WAL/SHM files)
+/tooling/dev-launcher/data/

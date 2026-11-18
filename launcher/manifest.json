@@ -1,0 +1,8 @@
+{
+  "createdAt": "2026-11-06T03:23:25.000Z",
+  "title": "Network Signal Atlas",
+  "description": "Investigate grid events, asset measurements and unusual trends across a distribution network.",
+  "screenshot": "./screenshot.png",
+  "screenshotAlt": "Synthetic North Quay network overview with event activity, Foundry joint temperature and feeder-current histories, plus linked thermal and electrical evidence.",
+  "addedAt": "2026-11-06"
+}

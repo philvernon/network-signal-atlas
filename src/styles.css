@@ -1,0 +1,80 @@
+@import "tailwindcss" source(".");
+
+@theme {
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --color-ink: #354142;
+  --color-muted: #616d70;
+  --color-line: #d9dfdf;
+  --color-paper: #ffffff;
+  --color-canvas: #f4f5f4;
+  --color-activity: #2e5795;
+  --color-activity-soft: #e5edf8;
+  --color-thermal: #60518e;
+  --color-thermal-soft: #eeebf6;
+  --color-electrical: #246570;
+  --color-electrical-soft: #e0eff1;
+  --color-amber: #e9b641;
+  --color-amber-soft: #fff3d6;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+  button,
+  a,
+  input,
+  select,
+  summary {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button,
+  select,
+  summary {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-activity);
+    outline-offset: 4px;
+  }
+  ::selection {
+    background: var(--color-amber-soft);
+    color: var(--color-ink);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .content {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-9 lg:px-14;
+  }
+  .action {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 border border-line bg-paper px-4 py-2 text-sm font-semibold text-ink hover:border-activity hover:text-activity;
+  }
+  .action-primary {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 bg-activity px-4 py-2 text-sm font-semibold text-paper hover:bg-ink;
+  }
+  .text-link {
+    @apply font-semibold text-activity underline decoration-activity/30 underline-offset-4 hover:decoration-activity;
+  }
+  .field {
+    @apply min-h-11 w-full border border-line bg-paper px-3 py-2 text-sm text-ink;
+  }
+  .section-title {
+    @apply text-2xl font-bold tracking-tight;
+  }
+  .eyebrow {
+    @apply text-sm font-semibold text-muted;
+  }
+}
